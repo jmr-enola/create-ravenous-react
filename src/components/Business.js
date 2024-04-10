@@ -2,20 +2,7 @@ import React from 'react';
 import '../styles/BusinessList.css';
 import '../styles/Business.css';
 
-
-const business = {
-    imgSrc: 'https://play-lh.googleusercontent.com/7AWR24mar0CgElbgJnKavdh-9bv2OQCJb15gpQkMVmBzoIHYdJqt1Lgr5I72liT3EA',
-    name: 'Pizza Hut',
-    address: 'East Service Road',
-    city: 'Taguig',
-    state: 'Philippines',
-    zipcode: '1630',
-    category: 'American',
-    rating: 4.5,
-    reviewCount: 200  
-};
-
-function Business() {
+function Business({ business }) {
     return (
         <article className='card-business'>
             <img  
@@ -36,5 +23,19 @@ function Business() {
         </article>
     );
 }
+
+Business.defaultProps = {
+    business: {
+        imgSrc: 'https://play-lh.googleusercontent.com/7AWR24mar0CgElbgJnKavdh-9bv2OQCJb15gpQkMVmBzoIHYdJqt1Lgr5I72liT3EA',
+        name: 'Pizza Hut',
+        address: 'East Service Road',
+        city: 'Taguig',
+        state: 'Philippines',
+        zipcode: '1630',
+        category: 'American',
+        rating: 4.5,
+        reviewCount: 200
+    },    
+};
 
 export default Business;

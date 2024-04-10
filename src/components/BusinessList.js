@@ -2,12 +2,18 @@ import React from 'react'
 import Business from './Business';
 
 
-function BusinessList() {
+function BusinessList({ data }) {
 
     const businesses = [];
 
-    for (let i = 0; i < 12; i++){
-        businesses.push(<Business/>)
+    if (data) {
+        data.forEach((item) => {
+            businesses.push(<Business business={item}/>);
+        });
+    } else {
+         for (let i = 0; i < 12; i++){
+            businesses.push(<Business/>);
+        }
     }
 
     return (

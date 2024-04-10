@@ -1,7 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
+import { data } from './mocks/dataDummy'
 import SearchBar from './components/SearchBar';
 import BusinessList from './components/BusinessList';
+
 
 function App() {
   return (
@@ -11,7 +13,7 @@ function App() {
         <SearchBar/>
       </header>
       <main>
-        <BusinessList/>
+        <BusinessList data={data}/>
       </main>
     </div>
   );
