@@ -45,6 +45,16 @@
     padding: 2px 2px;
 }
 
+.search-bar .filter ul li:hover{
+    color: gold;
+    opacity: 0.8;
+}
+
+.search-bar .filter ul li.selected-li{
+    color: gold;
+    font-weight: bold;
+}
+
 .search-bar .search-form {
     display: flex;
     flex-wrap: wrap;

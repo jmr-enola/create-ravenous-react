@@ -4,21 +4,26 @@ import Business from './Business';
 
 function BusinessList({ data }) {
 
-    const businesses = [];
+    const generateList = () => {
+        const businesses = [];
 
-    if (data) {
-        data.forEach((item) => {
-            businesses.push(<Business business={item}/>);
-        });
-    } else {
-         for (let i = 0; i < 12; i++){
-            businesses.push(<Business/>);
+        if (data) {
+            data.forEach((item) => {
+                businesses.push(<Business business={item}/>);
+            });
+        } else {
+            for (let i = 0; i < 12; i++){
+                businesses.push(<Business/>);
+            }
         }
-    }
+
+        return businesses;
+    };
+    
 
     return (
         <section className='businesses'>
-            {businesses}
+            {generateList()}           
         </section>
     );  
 }
